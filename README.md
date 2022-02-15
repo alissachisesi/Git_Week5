@@ -19,6 +19,9 @@ After running these commands, please log out of OnDemand, and then log back in. 
 
 The version number should now be 2.18.0.
 
+Pushing changes --> need to authenticate --> must enter personal access tokens (limited password) --> click link --> create token
+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
+
 ## Personal Access Tokens
 
 Learn how to [create a personal access token for GitHub](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
@@ -39,6 +42,9 @@ Learn how to [create a personal access token for GitHub](https://docs.github.com
     - What's different?
     - Explore a bit with `cd` and `cat`
 
+delete a repository --> all you have to do is delete folder (.git folder) 
+nothing is in the repository yet --> mist tell it that it is in the repository 
+
 ## 'Git'ting started
   - Git projects operate on a branching model. Branches keep track of different versions of a project, without having to store completely independent copies.
   - The most basic way to work with git is to use only a single branch, usually called "Main". As changes are made, they are all committed (sort of like git's version of saving) to the Main branch.
@@ -49,6 +55,15 @@ Learn how to [create a personal access token for GitHub](https://docs.github.com
     - What is git keeping track of?
   - `git log` - See what commits have been made to this project
     - Since we haven't yet done anything with our repository, there is nothing yet to show in the log. First, we need to commit something.
+
+Mkdir <file>
+Cd <file>
+echo "<file>" >>outline.txt
+git add <outline.txt> (stage a change)
+git status 
+git commit "adding outline.txt" (adding commit message --> and actually commit) 
+echo "info" >> outline.txt (adds it to exisiting file) 
+
 
 ## Git Stages
   - In order to keep track of the files associated with your project, you need to tell git to include them. Files that you associated with your repository are 'tracked'. In order to do this, use `git add`.
@@ -101,6 +116,15 @@ Learn how to [create a personal access token for GitHub](https://docs.github.com
   - Now, we can pull in the changes from our feature branch with `git merge feature One`.
   - Since main now has all the changes we made in feature One, we can delete that feature branch - `git branch -d featureOne`
   - Note that when you look at `git log --graph` now, it's as if the feature branch never existed. The changes made there are now seamlessly integrated into the main branch.
+	
+Git branch <name> (create new branch) 
+Git branch (look at all branches) 
+* --> one its currently wokring on 
+git checkout feat 1
+echo "newfile" > feat1file.txt
+git add feat1file.txt 
+git commit -m "commit message"
+Git checkout master (bring back to master branch 
 
 ## Collaborative coding
   - We are going to use git to work together to fix and expand a catalog of animals found in Louisiana.
